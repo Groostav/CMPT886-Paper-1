@@ -10,7 +10,7 @@ _By Geoff Groos, Rafiq Dandoo, and Sanjeet ???_
 Why not generate tests?
 
 - Tests are dumb -> lack of expressability
-- Tests are too large -> not short and concise 
+- Tests are too large -> not short and concise
 - Language is too complex -> difficult to generate code
 
 ---
@@ -20,9 +20,20 @@ Use a Stochastic AST generation scheme
 
 - Generate short but punchy source code
 
-Run the compilers on that generated source
+- Started as a branch off another random C generator
 
-- Disagreement about the behaviour of the same source code between different compilers implies a bug
+---
+
+# Methodology of Research
+
+How do we tell if the compiled version of randomly generated source code is
+correct when the source code is potentially thousands of lines long
+
+  - We need an oracle of some type
+    Problem is, as discussed in class this is a very hard thing to do
+
+  - Better solution: poll the results of different compilers and ones that
+    disagree with the majority are wrong
 
 ---
 
@@ -36,6 +47,8 @@ Run the compilers on that generated source
 
 - Still a big progamming community
  - All of whom are insane not to use ADA or C but with a C++ compiler...
+
+- C++ is extremely complex and creating a random generator for it would be much harder
 
 ---
 
@@ -56,13 +69,13 @@ You would think that the source code might look something like:
 int main(){
    int x = func1();
    int y = func2();
-   
+
    if(x == 0) || (x < -3){
      x = func3();
    }
-   
+
    y = func4();
-   
+
    print(x, y);
 }
 ```
@@ -106,4 +119,3 @@ Whats really incredible is the LLVM compiler guys get _right on it_, and find th
 # Nit-picking #
 
 - appendix containing a complete list of bugs?
-
