@@ -71,7 +71,7 @@ _Not even close_.
 
 ---
 
-# Some sample code (cont)#
+# Some sample code (cont) #
 
 The code that CSmith generted to produce this bug report was _this_:
 
