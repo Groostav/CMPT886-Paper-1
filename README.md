@@ -5,8 +5,6 @@ _By Geoff Groos, Rafiq Dandoo, and Sanjeet ???_
 
 ## 1: intro ##
 
----
-
 ### Finding Bugs is Hard ###
 
 Why not generate tests?
