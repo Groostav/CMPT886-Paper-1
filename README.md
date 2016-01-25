@@ -24,6 +24,17 @@ Use a Stochastic AST generation scheme
 
 ---
 
+# Design Goals of CSmith
+
+Two main design goals of CSmith
+
+  - First: Every program must be well formed and have a single meaning
+
+  - Second: Maximize expressiveness with respect to restraints imposed by
+    the first goal
+
+---
+
 # Methodology of Research
 
 How do we tell if the compiled version of randomly generated source code is
@@ -55,6 +66,52 @@ correct when the source code is potentially thousands of lines long
 # No heap support, mentioned admist a wall of text #
 
 >...such pointers are not dereferenced or used in comparisons once they become invalid. Csmith’s pointer analysis is flow sensitive, field sensitive, context sensitive, path insensitive, and array-element insensitive. A points-to fact is an explicit set of locations that may be referenced, and may include two special elements: the null pointer and the invalid (out- of-scope) pointer. Points-to sets containing a single element serve as must-alias facts unless the pointed-to object is an array element. Because **Csmith  does  not  generate  programs  that  use  the  heap**, assigning names to storage locations is trivial. Effect safety The C99 standard states that “[t]he order of evalua- tion of the function designator, the actual arguments, and subexpres- sions within the actual arguments is unspecified.” Also, undefined behavior occurs if “[b]etween two sequence points, an object is modified more than once, or is modified and the prior value is read other than to determine the value to be stored.” To avoid these problems, Csmith uses its pointer analysis to perform a conservative interprocedural analysis and determine the effect of every expression...
+
+---
+
+# Algorithm for Generating Random Code
+
+  - Starts by creating type definitions
+
+  - Begins to generate main()
+  - checks what it's allowed to produce from it's grammar, using a probability table and filter
+  - if the selected production requires a target, eg variable or function it selects or defines one
+  - generator uses recursion if the selected production is nonterminal
+  - executes a collection of dataflow transfer functions
+  - does saftey checks (more on this)
+
+---
+
+# Saftey Checks for Randomly generated code
+
+  Things they needed to worry about:
+    - type Safety: not really clear how they did address this just said "required most care"
+
+    - Pointer Safety: Csmith uses pointer analysis to preform conservative interprocedural analysis and determine effect of every expression.
+
+    - Array Safety: generates index variables
+
+    - Initilizer Safety: local ones are easy to deal with, gotos complicate this, Csmith forbids gotos from spanning Initilizer code.
+
+---
+
+# Effcient Global Saftey
+
+  Csmith never commits to a code fragment unless it has been shown to be safe.
+
+  Loops and functions complicate this. solution is dataflow analysis!
+
+  int i;
+  int *pi = &i;
+  while(...){
+    p = 3;
+    ...
+    *p = 0;
+  }
+  **
+  Options: be conservative with analysis: run the whole program's analysis
+      - not Effcient
+  Solution: restrict analysis to local scope where functions and loops are involved.
 
 ---
 
