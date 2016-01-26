@@ -85,11 +85,10 @@ correct when the source code is potentially thousands of lines long
 # Saftey Checks for Randomly generated code
 
   Things they needed to worry about:
-    - Integer Safety: Cmsith uses a family of wrapper functions for arithmetic operators whose (promoted) operands might overflow
     - type Safety: not really clear how they did address this just said "required most care"
 
     - Pointer Safety: Csmith uses pointer analysis to preform conservative interprocedural analysis and determine effect of every expression.
-
+    - Integer Safety: Cmsith uses a family of wrapper functions for arithmetic operators whose (promoted) operands might overflow
     - Array Safety: generates index variables
 
     - Initilizer Safety: local ones are easy to deal with, gotos complicate this, Csmith forbids gotos from spanning Initilizer code.
