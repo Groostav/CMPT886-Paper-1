@@ -59,7 +59,9 @@ Then simply enumerate through the possible productions from your current product
 
 ![Table with many productions](https://cloud.githubusercontent.com/assets/1680611/12590255/cd5978b2-c416-11e5-82a0-f0dfd1937b00.png)
 
-Done, a nice concise program generated painlessly
+Which _may_ eventually get us back to `arr[i + 3 * 4]`
+
+Ok, a nice concise program generated painlessly.
 
  _What could go wrong?_
  
