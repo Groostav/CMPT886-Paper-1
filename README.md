@@ -64,7 +64,7 @@ Once a random program is generated and compiled, how can we use it to find a bug
 
 ---
 
-# Saftey Checks for Randomly generated code
+# Safety Checks for Randomly generated code
 
 _They spend a great deal of time making sure you know their program generates correct code_
 
