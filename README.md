@@ -355,7 +355,7 @@ _So why didnt he run the path coverage analysis?_
 
 - Are there better strategies for bug finding?
 
- - but if he had simply be auditing the code, would he have found more bugs? 
+ - but if he had simply be auditing the code and/or doing more traditional testing, would he have found more bugs? 
  
  - He claims '300 bugs for $1000'. That's a very naive calculation; who here is willing to work for three years for an honerarium of $1000?
 
