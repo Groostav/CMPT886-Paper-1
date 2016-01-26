@@ -53,7 +53,7 @@ Take the table and assign probabilities to the productions
 
 Then simply enumerate through the possible productions from your current production, picking the next one at random
 
---
+---
 
 # Enter CSmith (1) #
 
@@ -62,6 +62,8 @@ Then simply enumerate through the possible productions from your current product
 Done, a nice concise program generated painlessly
 
  _What could go wrong?_
+ 
+---
 
 # Enter CSmith (2) #
 
