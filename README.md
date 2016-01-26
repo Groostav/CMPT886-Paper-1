@@ -45,6 +45,8 @@ _Source code_ to _Lookup Table_ to _Abstract Syntax Tree_
 
 Take the table and assign probabilities to the productions
 
+---
+
 # Enter CSmith (1) #
 
 ![Table with weights and a production](https://cloud.githubusercontent.com/assets/1680611/12590257/cd9578f8-c416-11e5-9572-e6438bb54f84.png)
