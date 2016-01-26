@@ -27,14 +27,39 @@ Why not test the compilers with _random_ C source code?
 
 - Cant judge results, how do we know if the compiled code is correct?
 
----
-
-# Enter CSmith #
-Use a stochastic reverse-AST generation scheme
-
-TODO graphs... source to AST and back again.
+**Use a stochastic reverse-AST generation scheme.**
 
 ---
+
+# Compiler (front-end) in 30s #
+
+![compiler front end in 30s](https://cloud.githubusercontent.com/assets/1680611/12589984/73c39540-c415-11e5-896a-d9f45884eb5b.png)
+
+_Source code_ to _Lookup Table_ to _Abstract Syntax Tree_
+
+---
+
+# Enter CSmith (1) #
+
+![Table](https://cloud.githubusercontent.com/assets/1680611/12589981/73bfaf20-c415-11e5-9656-847032498090.png)
+
+Take the table and assign probabilities to the productions
+
+# Enter CSmith (1) #
+
+![Table with weights and a production](https://cloud.githubusercontent.com/assets/1680611/12589983/73c178e6-c415-11e5-836f-9c48b24ad7af.png)
+
+Then simply enumerate through the possible productions from your current production, picking the next one at random
+
+--
+
+# Enter CSmith (1) #
+
+![Table with many productions](https://cloud.githubusercontent.com/assets/1680611/12589982/73c01406-c415-11e5-9020-87781c2fa791.png)
+
+Done, a nice concise program generated painlessly
+
+ _What could go wrong?_
 
 # Enter CSmith (2) #
 
