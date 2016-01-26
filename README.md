@@ -33,7 +33,7 @@ Why not test the compilers with _random_ C source code?
 
 # Compiler (front-end) in 30s #
 
-![compiler front end in 30s](https://cloud.githubusercontent.com/assets/1680611/12589984/73c39540-c415-11e5-896a-d9f45884eb5b.png)
+![compiler front end in 30s](https://cloud.githubusercontent.com/assets/1680611/12590256/cd5d5cc0-c416-11e5-9ab8-79a0184b89bf.png)
 
 _Source code_ to _Lookup Table_ to _Abstract Syntax Tree_
 
@@ -41,13 +41,13 @@ _Source code_ to _Lookup Table_ to _Abstract Syntax Tree_
 
 # Enter CSmith (1) #
 
-![Table](https://cloud.githubusercontent.com/assets/1680611/12589981/73bfaf20-c415-11e5-9656-847032498090.png)
+![Table](https://cloud.githubusercontent.com/assets/1680611/12590258/cd9ebf3a-c416-11e5-8b84-d8c2edd3f9be.png)
 
 Take the table and assign probabilities to the productions
 
 # Enter CSmith (1) #
 
-![Table with weights and a production](https://cloud.githubusercontent.com/assets/1680611/12589983/73c178e6-c415-11e5-836f-9c48b24ad7af.png)
+![Table with weights and a production](https://cloud.githubusercontent.com/assets/1680611/12590257/cd9578f8-c416-11e5-9572-e6438bb54f84.png)
 
 Then simply enumerate through the possible productions from your current production, picking the next one at random
 
@@ -55,7 +55,7 @@ Then simply enumerate through the possible productions from your current product
 
 # Enter CSmith (1) #
 
-![Table with many productions](https://cloud.githubusercontent.com/assets/1680611/12589982/73c01406-c415-11e5-9020-87781c2fa791.png)
+![Table with many productions](https://cloud.githubusercontent.com/assets/1680611/12590255/cd5978b2-c416-11e5-82a0-f0dfd1937b00.png)
 
 Done, a nice concise program generated painlessly
 
